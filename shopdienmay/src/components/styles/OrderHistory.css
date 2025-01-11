@@ -1,0 +1,87 @@
+/* OrderHistory.css */
+
+/* Toàn bộ container */
+.container {
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+  }
+  
+  /* Tiêu đề */
+  h2 {
+    font-size: 1.8rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Bảng */
+  .table {
+    background-color: white;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 1rem;
+  }
+  
+  .table th {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding: 0.8rem;
+  }
+  
+  .table td {
+    vertical-align: middle;
+    padding: 0.8rem;
+    font-size: 1rem;
+  }
+  
+  .table ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+  }
+  
+  .table ul li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .table ul li a {
+    text-decoration: none;
+    color: #007bff;
+  }
+  
+  .table ul li a:hover {
+    text-decoration: underline;
+    color: #0056b3;
+  }
+  
+  /* Spinner */
+  .spinner-border {
+    display: block;
+    margin: 2rem auto;
+  }
+  
+  /* Thông báo lỗi */
+  .text-danger {
+    font-size: 1.2rem;
+    color: #d9534f;
+    margin: 1rem 0;
+    text-align: center;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .table th,
+    .table td {
+      font-size: 0.9rem;
+    }
+  
+    h2 {
+      font-size: 1.5rem;
+    }
+  }
+  

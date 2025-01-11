@@ -1,0 +1,155 @@
+/* styles/DonHangList.css */
+.donhang-list-container {
+  padding: 2rem;
+  background: linear-gradient(to bottom right, #ffffff, #f7f9fc);
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  margin: 2rem auto;
+  animation: slideIn 0.6s ease-out;
+}
+
+.donhang-list-title {
+  color: #34495e;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  font-size: 2.3rem;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.donhang-list-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  height: 4px;
+  background: linear-gradient(to right, #e74c3c, #f39c12);
+  animation: expandWidth 0.8s ease-out;
+}
+
+.donhang-list-table {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.05);
+  border: none !important;
+}
+
+.donhang-list-thead {
+  background: linear-gradient(to right, #e74c3c, #f39c12);
+  color: white;
+}
+
+.donhang-list-thead th {
+  padding: 1.3rem !important;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  border: none !important;
+  font-size: 0.95rem;
+}
+
+.donhang-list-row {
+  transition: all 0.3s ease;
+  border-bottom: 1px solid #eee;
+}
+
+.donhang-list-row:hover {
+  background-color: #fff5f5 !important;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(231, 76, 60, 0.1);
+}
+
+.donhang-list-row td {
+  padding: 1.2rem !important;
+  vertical-align: middle;
+  color: #2c3e50;
+}
+
+/* Định dạng cột giá tiền */
+.donhang-list-row td:last-child {
+  font-weight: 600;
+  color: #e74c3c;
+}
+
+/* Định dạng cột ngày */
+.donhang-list-row td:nth-last-child(2) {
+  color: #7f8c8d;
+  font-style: italic;
+}
+
+/* Animations */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes expandWidth {
+  from {
+    width: 0;
+  }
+  to {
+    width: 120px;
+  }
+}
+
+/* Loading animation */
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #e74c3c;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 2rem auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .donhang-list-container {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+  
+  .donhang-list-title {
+    font-size: 2rem;
+  }
+  
+  .donhang-list-thead th {
+    padding: 1rem !important;
+    font-size: 0.85rem;
+  }
+  
+  .donhang-list-row td {
+    padding: 1rem !important;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .donhang-list-container {
+    padding: 1rem;
+  }
+  
+  .donhang-list-title {
+    font-size: 1.8rem;
+  }
+  
+  .donhang-list-table {
+    font-size: 0.85rem;
+  }
+}

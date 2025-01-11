@@ -1,0 +1,22 @@
+/* styles/OrderDetail.css */
+.mt-4 {
+  margin-top: var(--spacing-xl);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-danger {
+  color: var(--danger-color);
+}
+
+img {
+  max-width: 100px;
+  max-height: 100px;
+  object-fit: contain;
+}
+
+td {
+  vertical-align: middle;
+}

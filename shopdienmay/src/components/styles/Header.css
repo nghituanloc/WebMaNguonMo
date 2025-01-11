@@ -1,0 +1,136 @@
+/* Header.css */
+
+.header-navbar {
+  background: linear-gradient(to right, #ffffff, #f8f9fa) !important;
+  padding: 15px 30px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-brand {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #3498db !important;
+  transition: all 0.3s ease;
+}
+
+.header-brand:hover {
+  transform: scale(1.05);
+  color: #2980b9 !important;
+}
+
+.header-nav-link {
+  color: #34495e !important;
+  font-weight: 500;
+  padding: 8px 15px !important;
+  margin: 0 5px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.header-nav-link:hover {
+  color: #3498db !important;
+  background-color: rgba(52, 152, 219, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Đoạn đã thay đổi: thay thế form bằng div, cập nhật styles */
+.header-search-form {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin: 0 15px;
+}
+
+.header-search-input {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  min-width: 200px;
+}
+
+.header-search-input:focus {
+  outline: none;
+  border-color: #0066cc;
+  box-shadow: 0 0 0 2px rgba(0, 102, 204, 0.2);
+}
+
+.header-search-btn {
+  padding: 8px 16px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.header-search-btn:hover {
+  background-color: #218838;
+}
+/* Kết thúc đoạn thay đổi */
+
+.header-auth-nav {
+  margin-left: auto;
+}
+
+.header-logout-link {
+  color: #e74c3c !important;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.header-logout-link:hover {
+  color: #c0392b !important;
+  transform: translateY(-2px);
+}
+
+/* Responsive styles */
+@media (max-width: 991px) {
+  .header-search-form {
+    margin: 10px 0;
+  }
+  
+  .header-search-input {
+    min-width: auto;
+  }
+  
+  .header-nav-link {
+    padding: 8px 10px !important;
+    margin: 5px 0;
+  }
+}
+
+/* Animation cho dropdown menu */
+.header-collapse {
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hiệu ứng active cho nav links */
+.header-nav-link.active {
+  background-color: rgba(52, 152, 219, 0.1);
+  color: #3498db !important;
+}
+
+/* Hiệu ứng cho toggle button trên mobile */
+.header-toggle {
+  border: none;
+  padding: 8px;
+  transition: all 0.3s ease;
+}
+
+.header-toggle:focus {
+  box-shadow: none;
+  outline: none;
+}

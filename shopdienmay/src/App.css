@@ -1,0 +1,157 @@
+/* App.css */
+
+/* Hiệu ứng chung và biến màu */
+:root {
+  --primary-color: #2c3e50;
+  --secondary-color: #3498db;
+  --accent-color: #e74c3c;
+  --background-light: #f8f9fa;
+  --text-color: #2c3e50;
+  --transition-speed: 0.3s;
+}
+
+/* Animation cho toàn bộ trang */
+.container {
+  animation: fadeIn 0.5s ease-in;
+  min-height: calc(100vh - 160px);
+  padding: 20px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Header styles */
+.header {
+  background: var(--primary-color);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  transition: all var(--transition-speed);
+}
+
+.nav-link {
+  position: relative;
+  transition: color var(--transition-speed);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--secondary-color);
+  transition: width var(--transition-speed);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Card và Button styles */
+.card {
+  transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.btn {
+  transition: all var(--transition-speed);
+  border-radius: 25px;
+  padding: 8px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255,255,255,0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.btn:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+/* Footer styles */
+.footer {
+  background: var(--primary-color);
+  padding: 20px 0;
+  margin-top: auto;
+  color: white;
+  transition: all var(--transition-speed);
+}
+
+/* Form styles */
+.form-control {
+  border-radius: 8px;
+  border: 2px solid transparent;
+  transition: all var(--transition-speed);
+}
+
+.form-control:focus {
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
+}
+
+/* Table styles */
+.table {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.table thead th {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+}
+
+.table tbody tr {
+  transition: background-color var(--transition-speed);
+}
+
+.table tbody tr:hover {
+  background-color: rgba(52, 152, 219, 0.1);
+}
+
+/* Loading animation */
+.loading {
+  animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    margin-top: 60px;
+    padding: 10px;
+  }
+  
+  .btn {
+    padding: 6px 15px;
+  }
+}

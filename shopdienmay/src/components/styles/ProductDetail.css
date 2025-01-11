@@ -1,0 +1,258 @@
+/* styles/ProductDetail.css */
+
+/* ... các CSS khác đã có ... */
+
+.product-detail-container {
+  padding: 3rem 0;
+  background-color: #f8fafc;
+  min-height: 100vh;
+}
+
+.product-detail-layout {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 3rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Phần hình ảnh bên trái */
+.product-detail-left {
+  position: sticky;
+  top: 2rem;
+  height: 80vh;
+  background-color: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-image {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  padding: 2rem;
+  transition: transform 0.5s ease;
+}
+
+.product-image:hover {
+  transform: scale(1.05);
+}
+
+/* Phần thông tin bên phải */
+.product-detail-right {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Card thông tin sản phẩm */
+.product-info-card {
+  background: white;
+  border: none;
+  border-radius: 20px;
+  padding: 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.product-title {
+  font-size: 2.5rem;
+  color: #1a1a1a;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  line-height: 1.2;
+}
+
+.product-price-description {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #4a5568;
+}
+
+.product-price-description strong {
+  color: #2d3748;
+}
+
+.product-description {
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  background-color: #f7fafc;
+  border-radius: 12px;
+  border-left: 5px solid #4299e1;
+  font-size: 1.1rem;
+  color: #4a5568;
+}
+
+/* Input số lượng */
+.quantity-input-group {
+  margin: 2rem 0;
+}
+
+.quantity-input {
+  width: 120px;
+  padding: 0.8rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.quantity-input:focus {
+  border-color: #4299e1;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.2);
+}
+
+/* Nút thêm vào giỏ hàng */
+.add-to-cart-button {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, #4299e1, #2b6cb0);
+  border: none;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.add-to-cart-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(66, 153, 225, 0.3);
+}
+
+/* Phần đánh giá */
+.reviews-title {
+  font-size: 1.8rem;
+  color: #2d3748;
+  font-weight: 600;
+  margin: 1rem 0;
+  padding-bottom: 1rem;
+  border-bottom: 3px solid #4299e1;
+}
+
+.review-card {
+  background: white;
+  border: none;
+  border-radius: 15px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.review-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.review-author {
+  font-size: 1.2rem;
+  color: #2d3748;
+  font-weight: 600;
+}
+
+.review-rating {
+  margin: 0.5rem 0;
+}
+
+.star-icon {
+  color: #f6e05e;
+  font-size: 1.3rem;
+  margin-right: 3px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Form đánh giá */
+.review-form-card {
+  background: white;
+  border: none;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.review-form-title {
+  font-size: 1.5rem;
+  color: #2d3748;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.rating-select {
+  width: 180px;
+  padding: 0.8rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.review-textarea {
+  padding: 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  resize: vertical;
+  min-height: 120px;
+  transition: all 0.3s ease;
+}
+
+.submit-review-button {
+  margin-top: 1rem;
+  padding: 0.8rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, #48bb78, #2f855a);
+  border: none;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.submit-review-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(72, 187, 120, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .product-detail-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .product-detail-left {
+    height: 50vh;
+    position: relative;
+    top: 0;
+  }
+
+  .product-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .product-detail-container {
+    padding: 1rem 0;
+  }
+
+  .product-detail-layout {
+    padding: 0 1rem;
+  }
+
+  .product-detail-left {
+    height: 40vh;
+  }
+
+  .product-title {
+    font-size: 1.8rem;
+  }
+
+  .review-form-card {
+    padding: 1rem;
+  }
+}

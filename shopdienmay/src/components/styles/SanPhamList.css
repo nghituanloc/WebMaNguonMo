@@ -1,0 +1,125 @@
+.product-table-container {
+  padding: 20px 0;
+}
+
+.product-table-header {
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.product-table {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.product-table thead {
+  background-color: #f8f9fa;
+}
+
+.product-table th {
+  padding: 15px !important;
+  font-weight: 600;
+  border-bottom: 2px solid #dee2e6;
+}
+
+.product-table td {
+  vertical-align: middle !important;
+  padding: 12px !important;
+}
+
+.product-image {
+  border-radius: 8px;
+  object-fit: cover;
+  border: 1px solid #dee2e6;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.create-button {
+  background-color: #3498db;
+  border: none;
+  padding: 8px 16px;
+  transition: all 0.3s ease;
+}
+
+.create-button:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+}
+
+.edit-button {
+  background-color: #f1c40f !important;
+  border: none !important;
+  color: #000 !important;
+}
+
+.delete-button {
+  background-color: #e74c3c !important;
+  border: none !important;
+}
+
+.product-grid {
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.product-header {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 2fr 1.5fr 2fr 1.5fr 1.5fr;
+  background-color: #f8f9fa;
+  font-weight: bold;
+  border-bottom: 2px solid #dee2e6;
+}
+
+.product-body {
+  background-color: #fff;
+}
+
+.product-row {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr 2fr 1.5fr 2fr 1.5fr 1.5fr;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.product-row:nth-child(odd) {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.header-cell,
+.product-cell {
+  padding: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.product-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.edit-button,
+.delete-button {
+  padding: 6px 12px;
+}
+
+.create-button {
+  margin-bottom: 20px;
+}
+
+.product-table-header {
+  margin-bottom: 20px;
+  color: #333;
+}

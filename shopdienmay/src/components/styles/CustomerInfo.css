@@ -1,0 +1,55 @@
+/* styles/CustomerInfo.css */
+.customer-info-container {
+  max-width: 800px;
+  padding: 20px;
+}
+
+.customer-info-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.customer-info-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+
+.customer-info-avatar {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.customer-info-details-section {
+  flex: 1;
+}
+
+.customer-info-detail {
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.customer-info-edit-btn {
+  margin-top: 20px;
+  width: 100%;
+}
+
+/* Đáp ứng thiết kế responsive */
+@media (max-width: 576px) {
+  .customer-info-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .customer-info-avatar {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+  }
+}
